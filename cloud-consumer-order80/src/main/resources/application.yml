@@ -1,2 +1,59 @@
 server:
   port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+
+eureka:
+  client:
+    #表明把自己注册进入  eureka的服务端， 默认true
+    register-with-eureka: true
+    #是否从EurekaService抓取已有的注册信息，默认true, 单节点无所谓，
+    #集群必须设置为true,才能配合ribbon使用负载均衡
+    fetch-registry: true
+
+    service-url:
+      #指定要注册进入 的EurekaService地址
+      defaultZone: http://localhost:7001/eureka
+
+
+
+#--总部
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'002','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'003','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'005','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'009','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'010','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'021','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'023','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'025','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'026','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'028','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'029','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'030','0306','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'032','0306','CNY', 'CNY', '0','0','1','1','1','');
+#
+#--西安营业部
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'006','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'007','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'008','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'011','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'012','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'013','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'014','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'015','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'016','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'017','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'018','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'019','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'02','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'020','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'024','0301','CNY', 'CNY', '0','0','1','1','1','');
+#      insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'027','0301','CNY', 'CNY', '0','0','1','1','1','');
+
+
+#   insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'031','0310','CNY', 'CNY', '0','0','1','1','1','');
+#   insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'01','0310','CNY', 'CNY', '0','0','1','1','1','');
+#
+#  insert into cf_account.t_internetdefaultconfig (id,CLOUD_BRANCH_ID,BRANCH_ID, BASIC_CURRENCY_CODE, PROFIT_CURRENCY_CODE, BILLIS_MAIL, BILLIS_FAX,BILLIS_MESSAGE, BILL_NOTPRINT, BILLIS_CONFIRM ,CLIENT_CLASS )values (sys_guid(),'03','0308','CNY', 'CNY', '0','0','1','1','1','');

@@ -1,0 +1,8 @@
+CAP:
+    C-Consistency (强一致性)
+    A-Availability (高可用性)
+    P-Partition tolerance (分区容错性)
+
+    eureka: AP
+    zookeeper: CP
+    consul: CP

@@ -1,26 +1,26 @@
 server:
-  port: 3344
+  port: 3366
 
 spring:
   application:
-    name: cloud-connfig-center #注册进eureka服务器的微服务名
+    name: config-client
   cloud:
+    #客户端配置
     config:
-      server:
-        git:
-          uri: https://github.com/prajnaCat/springcloud-config.git
-          #搜索目录
-          search-paths:
-            - spring-config
-          #读取分支
-          label:
-            - master
+      #分支名称
+      label: master
+      #配置文件名称
+      name: config
+      #读取后缀名称
+      profile: dev
+      #配置中心地址；上述三个综合：'master'分支上'config'-'dev'.yml的配置文件被读取
+      uri: http://localhost:3344
+
 
 eureka:
   client:
     #表示是否将自己注册进服务端EurekaService，默认true，因为自身为eureka客户端
     #register-with-eureka: true
-
     #是否从EurekaService抓取已有的注册信息，默认true, 单节点无所谓，
     #集群必须设置为true,才能配合ribbon使用负载均衡
     #fetch-registry: true
@@ -38,15 +38,9 @@ rabbitmq:
   username: guest
   password: guest
 
-#rabbitmq相关配置，暴露bus刷新配置的端点
-#暴露监控端点
-#通过配置中心 通知到 所有的客户端配置config-client
-#请求 curl -X POST "http://localhost:3344/actuator/bus-refresh"
-#
-#精确通知到具体的config-client:3355(name:端口号),而不是所有
-#请求curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
+#暴露监控端点,为了解决：Git修改，但是3355不知道的痛点
 management:
   endpoints:
     web:
       exposure:
-        include: "bus-refresh"
+        include: "*"

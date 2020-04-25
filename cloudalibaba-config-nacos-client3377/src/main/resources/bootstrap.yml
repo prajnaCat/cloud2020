@@ -1,0 +1,24 @@
+#加载级别优先于其他的yml
+server:
+  port: 3377
+
+spring:
+  application:
+    name: nacos-config-client
+  #把本服务注册进下面的nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: localhost:8848
+        #指定yaml格式的设置
+        file-extension: yaml
+        #指定配置文件所在的命名空间  的id
+        namespace: 6c03f3af-7012-43ce-91b7-500a0eac35b3
+        #指定配置文件所在的分组
+        group: DEV_GROUP
+
+
+
+# nacos上的Data id必须命名为： ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}

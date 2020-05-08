@@ -17,7 +17,7 @@ spring:
         #指定配置文件所在的命名空间  的id
         namespace: 6c03f3af-7012-43ce-91b7-500a0eac35b3
         #指定配置文件所在的分组
-        group: DEV_GROUP
+          group: DEV_GROUP
 
 
 
